@@ -8,17 +8,20 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      background: #f5f7f8;
-      color: #101417;
+      background: #080c10;
+      color: #d4dde3;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.65;
     }
-    a { color: #c8102e; }
+    a { color: #25f4ee; }
     .page { max-width: 1140px; margin: 0 auto; padding: 28px; }
+
+    /* ── HERO ── */
     .hero {
-      background: radial-gradient(circle at 84% 18%, rgba(37,244,238,0.24), transparent 28%),
+      background: radial-gradient(circle at 84% 18%, rgba(37,244,238,0.18), transparent 28%),
         linear-gradient(135deg, #020608 0%, #071217 52%, #111015 100%);
-      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 10px;
       color: white;
       display: grid;
       gap: 28px;
@@ -45,20 +48,23 @@
     .subtitle { color: rgba(255,255,255,0.84); font-size: 21px; max-width: 670px; }
     .nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
     .nav a {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
       border-radius: 8px;
       color: white;
       font-weight: 800;
       padding: 10px 14px;
       text-decoration: none;
+      transition: background 0.2s;
     }
+    .nav a:hover { background: rgba(255,255,255,0.15); }
     .stats { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); margin-top: 26px; }
     .stat {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 8px;
       padding: 16px;
+      color: rgba(255,255,255,0.85);
     }
     .stat strong {
       color: #25f4ee;
@@ -69,118 +75,145 @@
       text-transform: uppercase;
     }
     .phone {
-      background: rgba(0,0,0,0.32);
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 8px;
+      background: rgba(0,0,0,0.38);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
       padding: 22px;
     }
     .screen {
       background: #05090b;
-      border: 1px solid rgba(37,244,238,0.26);
+      border: 1px solid rgba(37,244,238,0.22);
       border-radius: 8px;
       min-height: 310px;
       padding: 18px;
     }
-    .live-row {
-      align-items: center;
-      display: flex;
-      gap: 10px;
-      margin-bottom: 18px;
-    }
+    .live-row { align-items: center; display: flex; gap: 10px; margin-bottom: 18px; }
     .live-badge {
       background: #fe2c55;
       border-radius: 8px;
       font-size: 12px;
       font-weight: 900;
       padding: 6px 9px;
+      color: white;
     }
+    .live-row strong { color: white; }
     .product-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 8px;
       margin-top: 12px;
       padding: 16px;
     }
     .product-card b { color: white; display: block; font-size: 18px; }
-    .product-card span { color: rgba(255,255,255,0.68); display: block; margin-top: 4px; }
+    .product-card span { color: rgba(255,255,255,0.62); display: block; margin-top: 4px; }
     .shop-flow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
     .shop-flow span {
-      background: rgba(254,44,85,0.16);
-      border: 1px solid rgba(254,44,85,0.35);
+      background: rgba(254,44,85,0.14);
+      border: 1px solid rgba(254,44,85,0.32);
       border-radius: 8px;
-      color: white;
+      color: #ffb3c1;
       font-size: 12px;
       font-weight: 800;
       padding: 8px 10px;
     }
+
+    /* ── SECTIONS ── */
     .section {
-      background: white;
-      border: 1px solid rgba(16,20,23,0.1);
-      border-radius: 8px;
-      color: #101417;
-      margin-top: 24px;
+      background: #0e1318;
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 10px;
+      margin-top: 20px;
       padding: 30px;
     }
-    .section h2 { color: #c8102e; font-size: 34px; margin-bottom: 12px; }
-    .section h3 { color: #07333a; font-size: 22px; margin: 24px 0 8px; }
-    .lead { color: #5e666b; font-size: 18px; max-width: 900px; }
-    .grid { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
+    .section h2 {
+      color: #fe2c55;
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+    .section h3 {
+      color: #25f4ee;
+      font-size: 20px;
+      margin: 22px 0 8px;
+    }
+    .lead {
+      color: #9fb3be;
+      font-size: 17px;
+      max-width: 900px;
+    }
+
+    /* ── GRID CARDS ── */
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
     .card {
-      background: #fbfdfe;
-      border: 1px solid rgba(16,20,23,0.1);
+      background: #131b22;
+      border: 1px solid rgba(37,244,238,0.12);
       border-radius: 8px;
-      color: #101417;
       padding: 20px;
     }
-    .card h3 { margin-top: 0; }
-    .card p,
-    .card li,
-    .section p,
-    .section li,
-    .section td,
-    .section ol,
-    .section ul {
-      color: #101417;
+    .card h3 {
+      color: #25f4ee;
+      font-size: 17px;
+      margin: 0 0 8px;
     }
-    .section .lead {
-      color: #34424a;
-    }
-    .section strong {
-      color: #071217;
-    }
+    .card p, .card li { color: #b8cad4; }
+
+    /* ── GENERAL TEXT ── */
+    .section p, .section li, .section td, .section ol, .section ul { color: #b8cad4; }
+    .section strong { color: #e2eaf0; }
+
+    /* ── LISTS ── */
     ul, ol { margin: 10px 0 0 22px; }
     li { margin: 8px 0; }
+
+    /* ── TABLES ── */
     table {
-      border: 1px solid rgba(16,20,23,0.14);
+      border: 1px solid rgba(255,255,255,0.08);
       border-collapse: collapse;
       margin-top: 14px;
       width: 100%;
     }
     th, td {
-      border-bottom: 1px solid rgba(16,20,23,0.1);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
       padding: 12px;
       text-align: left;
       vertical-align: top;
     }
-    th { background: #071217; color: white; font-size: 13px; text-transform: uppercase; }
+    th {
+      background: #0a1520;
+      color: #25f4ee;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    tr:nth-child(even) td { background: rgba(255,255,255,0.025); }
+
+    /* ── CALLOUTS ── */
     .callout {
-      background: #e8ffff;
-      border-left: 5px solid #25f4ee;
+      background: rgba(37,244,238,0.07);
+      border-left: 4px solid #25f4ee;
       border-radius: 8px;
+      color: #a8dfe0;
       margin-top: 18px;
       padding: 16px 18px;
     }
+    .callout strong { color: #25f4ee; }
     .warning {
-      background: #fff0f3;
+      background: rgba(254,44,85,0.08);
       border-left-color: #fe2c55;
+      color: #f0b8c0;
     }
+    .warning strong { color: #fe2c55; }
+
+    /* ── LESSON DIVIDERS ── */
     .lesson {
-      border-top: 1px solid rgba(16,20,23,0.1);
-      margin-top: 24px;
-      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      margin-top: 26px;
+      padding-top: 26px;
     }
     .lesson:first-of-type { border-top: 0; margin-top: 0; padding-top: 0; }
-    .footer { color: #5e666b; font-size: 14px; margin-top: 24px; text-align: center; }
+
+    /* ── FOOTER ── */
+    .footer { color: #3e5260; font-size: 14px; margin-top: 24px; text-align: center; }
+
     @media (max-width: 880px) {
       .hero, .grid, .stats { grid-template-columns: 1fr; }
       .hero { padding: 28px; }
@@ -240,7 +273,6 @@
 
     <section id="lessons" class="section">
       <h2>The 14-Lesson Playbook</h2>
-
       <article class="lesson">
         <h3>Lesson 1: Understanding the TikTok Shop Ecosystem</h3>
         <table>
@@ -251,7 +283,7 @@
             <tr><td>TikTok</td><td>Provides shopping infrastructure, checkout, discovery, and policy enforcement.</td><td>Platform and transaction fees.</td></tr>
           </tbody>
         </table>
-        <p>As an affiliate creator, your job is not to carry inventory. Your job is to make product content that gets attention, earns trust, and moves people to purchase.</p>
+        <p style="margin-top:14px;">As an affiliate creator, your job is not to carry inventory. Your job is to make product content that gets attention, earns trust, and moves people to purchase.</p>
       </article>
 
       <article class="lesson">
@@ -315,7 +347,7 @@
           <div class="card"><h3>Tutorial</h3><p>Teach viewers exactly how to use it. Tutorials reduce hesitation because they answer practical objections.</p></div>
           <div class="card"><h3>Comparison</h3><p>Compare the product to alternatives, rank several options, or explain why one is worth buying.</p></div>
         </div>
-        <p><strong>Script formula:</strong> hook in 0-3 seconds, agitate the problem, show the product in action, reveal proof, then tell viewers to tap the bag or visit your showcase.</p>
+        <p style="margin-top:14px;"><strong>Script formula:</strong> hook in 0-3 seconds, agitate the problem, show the product in action, reveal proof, then tell viewers to tap the bag or visit your showcase.</p>
       </article>
 
       <article class="lesson">
@@ -360,30 +392,18 @@
             <tr><td>Pet products</td><td>Grooming tools, toys, feeders, travel accessories.</td></tr>
           </tbody>
         </table>
-        <p>Use four content pillars: product reviews, education, personality, and trend-based reach content. Keep roughly 40% product, 40% value or entertainment, and 20% trends.</p>
+        <p style="margin-top:14px;">Use four content pillars: product reviews, education, personality, and trend-based reach content. Keep roughly 40% product, 40% value or entertainment, and 20% trends.</p>
       </article>
 
       <article class="lesson">
         <h3>Lesson 9: Seller Partnerships</h3>
         <div class="grid">
-          <div class="card">
-            <h3>Open Collaboration</h3>
-            <p>Any approved affiliate can promote the product at the seller's listed commission rate.</p>
-          </div>
-          <div class="card">
-            <h3>Targeted Collaboration</h3>
-            <p>Sellers invite specific creators and may offer higher commission, samples, or exclusive deals.</p>
-          </div>
-          <div class="card">
-            <h3>Sample Programs</h3>
-            <p>Brands send products so creators can make stronger, more authentic demo content.</p>
-          </div>
-          <div class="card">
-            <h3>Ambassador Deals</h3>
-            <p>Top performers can negotiate elevated commission, early product access, and repeat campaigns.</p>
-          </div>
+          <div class="card"><h3>Open Collaboration</h3><p>Any approved affiliate can promote the product at the seller's listed commission rate.</p></div>
+          <div class="card"><h3>Targeted Collaboration</h3><p>Sellers invite specific creators and may offer higher commission, samples, or exclusive deals.</p></div>
+          <div class="card"><h3>Sample Programs</h3><p>Brands send products so creators can make stronger, more authentic demo content.</p></div>
+          <div class="card"><h3>Ambassador Deals</h3><p>Top performers can negotiate elevated commission, early product access, and repeat campaigns.</p></div>
         </div>
-        <p>Once you drive measurable sales, screenshot the proof, show GMV, show conversion, and ask the seller for better terms.</p>
+        <p style="margin-top:14px;">Once you drive measurable sales, screenshot the proof, show GMV, show conversion, and ask the seller for better terms.</p>
       </article>
 
       <article class="lesson">
@@ -403,9 +423,9 @@
       <article class="lesson">
         <h3>Lesson 11: Compliance and Policy</h3>
         <div class="callout warning">
-          Disclose affiliate relationships clearly. Use TikTok's shopping labels, and add clear language such as #TikTokShop, #affiliate, or #ad when appropriate.
+          <strong>Disclosure Required:</strong> Disclose affiliate relationships clearly. Use TikTok's shopping labels, and add clear language such as #TikTokShop, #affiliate, or #ad when appropriate.
         </div>
-        <ul>
+        <ul style="margin-top:14px;">
           <li>Do not make fake reviews, fake results, or unverified medical claims.</li>
           <li>Do not promote prohibited products or counterfeit goods.</li>
           <li>Do not buy followers or engagement to qualify faster.</li>
@@ -419,12 +439,12 @@
         <table>
           <thead><tr><th>Stage</th><th>Focus</th><th>Typical Timeline</th></tr></thead>
           <tbody>
-            <tr><td>$0-$500/mo</td><td>Find 1-2 converting products, post daily, practice LIVE.</td><td>30-60 days.</td></tr>
-            <tr><td>$500-$2,000/mo</td><td>Push 3-5 hero products, go LIVE several times per week, apply for targeted collaborations.</td><td>60-120 days.</td></tr>
-            <tr><td>$2,000-$10,000/mo</td><td>Use direct seller partnerships, repeat winning hooks, add UGC and brand deals.</td><td>3-6 months.</td></tr>
+            <tr><td>$0–$500/mo</td><td>Find 1-2 converting products, post daily, practice LIVE.</td><td>30-60 days.</td></tr>
+            <tr><td>$500–$2,000/mo</td><td>Push 3-5 hero products, go LIVE several times per week, apply for targeted collaborations.</td><td>60-120 days.</td></tr>
+            <tr><td>$2,000–$10,000/mo</td><td>Use direct seller partnerships, repeat winning hooks, add UGC and brand deals.</td><td>3-6 months.</td></tr>
           </tbody>
         </table>
-        <p>Batch creation keeps the machine running. Film 10-15 clips in one session, edit in CapCut or TikTok, and post throughout the week.</p>
+        <p style="margin-top:14px;">Batch creation keeps the machine running. Film 10-15 clips in one session, edit in CapCut or TikTok, and post throughout the week.</p>
       </article>
 
       <article class="lesson">
@@ -494,8 +514,8 @@
           <tr><td>$10,000/month</td><td>Owned product, brand deals, or strong seller partnerships.</td><td>Month 6-12.</td></tr>
         </tbody>
       </table>
-      <div class="callout">
-        TikTok Shop is a volume game fueled by consistency. Build the habit first: post, go LIVE, read analytics, improve the hook, repeat.
+      <div class="callout" style="margin-top:20px;">
+        <strong>Remember:</strong> TikTok Shop is a volume game fueled by consistency. Build the habit first: post, go LIVE, read analytics, improve the hook, repeat.
       </div>
     </section>
 
@@ -511,7 +531,7 @@
       </div>
     </section>
 
-    <p class="footer">Module 41 Complete - The Creator Plug Academy</p>
+    <p class="footer">Module 41 Complete &mdash; The Creator Plug Academy</p>
   </main>
 </body>
 </html>
